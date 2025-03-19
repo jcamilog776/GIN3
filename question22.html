@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 22 - Parque Cabal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pregunta 22 - Parque Cabal</h1>
+        <div class="header-info">
+            <div class="datetime-container">
+                <span id="current-datetime">2025-03-19 10:30:47</span>
+            </div>
+            <div class="user-container">
+                <span id="current-user">jcamilog776</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="access-validation">
+            <h2>Validar Acceso</h2>
+            <form id="access-form" class="access-form">
+                <div class="form-group">
+                    <label for="access-key">Ingrese la clave de acceso:</label>
+                    <input type="text" id="access-key" required pattern="BUGA-\d{4}" placeholder="BUGA-XXXX">
+                </div>
+                <button type="submit">Validar</button>
+            </form>
+        </section>
+
+        <section id="question-content" style="display: none;">
+            <div class="question-container">
+                <h2>¿Qué ubicación tenía el parque Cabal en su fundación?</h2>
+                
+                <form id="question-form">
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="answer" value="1">
+                            Bolívar, Santander, 20 de Julio y 7 de agosto
+                        </label>
+                        <label>
+                            <input type="radio" name="answer" value="2">
+                            Bolívar, Los coches, Santander y 7 de agosto
+                        </label>
+                        <label>
+                            <input type="radio" name="answer" value="3">
+                            Santander, 20 de Julio, Mendoza y 7 de agosto
+                        </label>
+                    </div>
+                    <button type="submit">Enviar Respuesta</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Descubriendo el Patrimonio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/questions.js"></script>
+</body>
+</html>

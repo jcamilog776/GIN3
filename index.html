@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubriendo el Patrimonio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Descubriendo el Patrimonio</h1>
+        <div class="header-info">
+            <div class="datetime-container">
+                <span id="current-datetime">2025-03-19 10:32:23</span>
+            </div>
+            <div class="user-container">
+                <span id="current-user">jcamilog776</span>
+            </div>
+            <div class="buttons-container">
+                <button id="admin-button" class="header-button">Administrar</button>
+                <button id="register-button" class="header-button">Registrar Equipo</button>
+                <button id="start-game-button" class="header-button">Iniciar Juego</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section id="welcome" class="welcome-section">
+            <h2>Bienvenidos al Juego del Patrimonio</h2>
+            <p>Explora y aprende sobre el patrimonio cultural de Buga a través de este emocionante juego de preguntas.</p>
+        </section>
+
+        <!-- Panel de Administración -->
+        <section id="admin-panel" style="display: none;">
+            <h2>Panel de Administración</h2>
+            <form id="admin-login-form" class="admin-form">
+                <div class="form-group">
+                    <label for="admin-user">Usuario:</label>
+                    <input type="text" id="admin-user" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-key">Clave de Acceso:</label>
+                    <input type="password" id="admin-key" required>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+        </section>
+
+        <!-- Dashboard del Administrador -->
+        <section id="admin-dashboard" style="display: none;">
+            <div class="admin-tabs">
+                <button class="tab-button active" data-tab="teams">Equipos</button>
+                <button class="tab-button" data-tab="scores">Puntajes</button>
+            </div>
+            
+            <div id="teams-panel" class="tab-panel">
+                <h3>Equipos Registrados</h3>
+                <div class="teams-list"></div>
+            </div>
+            
+            <div id="scores-panel" class="tab-panel" style="display: none;">
+                <h3>Tabla de Puntajes</h3>
+                <div class="scores-table"></div>
+            </div>
+        </section>
+
+        <!-- Sección de Registro de Equipo -->
+        <section id="register-team" style="display: none;">
+            <h2>Registro de Equipo</h2>
+            <form id="register-team-form">
+                <div class="form-group">
+                    <label for="school-name">Colegio:</label>
+                    <select id="school-name" required>
+                        <option value="">Seleccione un colegio</option>
+                        <option value="Académico">Académico</option>
+                        <option value="Normal">Normal Superior</option>
+                        <option value="SanVicente">San Vicente</option>
+                        <option value="LaPaz">La Paz</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="team-name">Nombre del Equipo:</label>
+                    <input type="text" id="team-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="responsible-name">Nombre del Responsable:</label>
+                    <input type="text" id="responsible-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="responsible-id">Identificación del Responsable:</label>
+                    <input type="text" id="responsible-id" required>
+                </div>
+
+                <button type="submit">Registrar Equipo</button>
+            </form>
+        </section>
+
+        <!-- Sección de Preguntas -->
+        <section id="questions-menu" style="display: none;">
+            <h2>Preguntas Disponibles</h2>
+            
+            <!-- Teatro Municipal -->
+            <div class="location-section">
+                <h3>Teatro Municipal</h3>
+                <div class="questions-grid">
+                    <a href="question1.html" class="question-card">Pregunta 1 - Año de construcción</a>
+                    <a href="question2.html" class="question-card">Pregunta 2 - Película inaugural</a>
+                    <a href="question3.html" class="question-card">Pregunta 3 - Mascarones</a>
+                    <a href="question4.html" class="question-card">Pregunta 4 - Forma interior</a>
+                    <a href="question5.html" class="question-card">Pregunta 5 - Sillas platea</a>
+                    <a href="question6.html" class="question-card">Pregunta 6 - Bien Cultural</a>
+                </div>
+            </div>
+
+            <!-- Academia de Historia -->
+            <div class="location-section">
+                <h3>Academia de Historia</h3>
+                <div class="questions-grid">
+                    <a href="question7.html" class="question-card">Pregunta 7 - Función principal</a>
+                    <a href="question8.html" class="question-card">Pregunta 8 - Fecha fundación</a>
+                    <a href="question9.html" class="question-card">Pregunta 9 - Contribución</a>
+                </div>
+            </div>
+
+            <!-- Univalle -->
+            <div class="location-section">
+                <h3>Univalle</h3>
+                <div class="questions-grid">
+                    <a href="question10.html" class="question-card">Pregunta 10 - Año fundación</a>
+                    <a href="question11.html" class="question-card">Pregunta 11 - Facultades</a>
+                </div>
+            </div>
+
+            <!-- Catedral -->
+            <div class="location-section">
+                <h3>Catedral</h3>
+                <div class="questions-grid">
+                    <a href="question12.html" class="question-card">Pregunta 12 - Iluminación</a>
+                    <a href="question13.html" class="question-card">Pregunta 13 - Estilo</a>
+                    <a href="question14.html" class="question-card">Pregunta 14 - Inicio construcción</a>
+                    <a href="question15.html" class="question-card">Pregunta 15 - Sismo</a>
+                    <a href="question16.html" class="question-card">Pregunta 16 - Consagración</a>
+                </div>
+            </div>
+
+            <!-- San Francisco -->
+            <div class="location-section">
+                <h3>San Francisco</h3>
+                <div class="questions-grid">
+                    <a href="question17.html" class="question-card">Pregunta 17 - Nombres</a>
+                    <a href="question18.html" class="question-card">Pregunta 18 - Año construcción</a>
+                    <a href="question19.html" class="question-card">Pregunta 19 - Elemento artístico</a>
+                </div>
+            </div>
+
+            <!-- Parque Cabal -->
+            <div class="location-section">
+                <h3>Parque Cabal</h3>
+                <div class="questions-grid">
+                    <a href="question20.html" class="question-card">Pregunta 20 - Material estatua</a>
+                    <a href="question21.html" class="question-card">Pregunta 21 - Nombres históricos</a>
+                    <a href="question22.html" class="question-card">Pregunta 22 - Ubicación original</a>
+                </div>
+            </div>
+
+            <!-- Basílica -->
+            <div class="location-section">
+                <h3>Basílica</h3>
+                <div class="questions-grid">
+                    <a href="question23.html" class="question-card">Pregunta 23 - Corazón</a>
+                    <a href="question24.html" class="question-card">Pregunta 24 - Inauguración</a>
+                    <a href="question25.html" class="question-card">Pregunta 25 - Plazoleta</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Clave de Acceso -->
+        <section id="access-key" style="display: none;">
+            <h2>¡Registro Completado!</h2>
+            <div class="success-message">
+                <p>Su clave de acceso es:</p>
+                <div id="team-key" class="team-key"></div>
+                <p class="key-instructions">Guarde esta clave, la necesitará para acceder a las preguntas del juego.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Descubriendo el Patrimonio. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
